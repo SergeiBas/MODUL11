@@ -7,6 +7,7 @@ public class Main {
         PeremishElStrim peremishElStrim = new PeremishElStrim();
 
         String str = "1. Ivan, 2. Sasha, 3. Peter, 4. Sergei, 5. Maxim, 11. Nemaxim, 7. Artur";
-        System.out.println(neParSpisok.delParNames(str));
+        String[] numarr = new String[]{"1, 2, 0", "4, 5"};
+        sortSpisZA.sortZA(str);
     }
 }
