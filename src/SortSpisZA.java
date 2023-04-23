@@ -1,10 +1,10 @@
 import java.util.*;
 
 public class SortSpisZA {
-    public void sortZA(String str){
-        String[] replaceAll = str.replaceAll("[0-9. ]","").toUpperCase().split(",");
-        replaceAll = Arrays.stream(replaceAll).sorted(Collections.reverseOrder())
+    public void sortZA(String[] str){
+        str = Arrays.stream(str).sorted(Collections.reverseOrder())
                 .toArray(String[]::new);
-        System.out.println(Arrays.toString(replaceAll));
+        for (int i = 0; i < str.length; i++) str[i] = str[i].toUpperCase();
+        System.out.println(Arrays.toString(str));
     }
 }
