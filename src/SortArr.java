@@ -1,15 +1,12 @@
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class SortArr {
     public String SortNumbers(String[] NumbersArr){
-        String str = "";
-        for (String item: NumbersArr) str += item + " ";
-        String[] arrNum = str.replaceAll("[ ,.]","").split("");
-        List<Integer> NumArr = new ArrayList<>();
-        for (String item: arrNum) NumArr.add(Integer.parseInt(item));
-        Collections.sort(NumArr);
-        String string = "";
-        for (int item: NumArr) string += item + " ";
-        return string;
+        return Arrays.stream(NumbersArr)
+                .map(item -> item.replaceAll("\\s+", "").split(","))
+                .flatMap(item -> Arrays.stream(item))
+                .sorted()
+                .collect(Collectors.joining(", "));
     }
 }

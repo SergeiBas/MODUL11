@@ -1,10 +1,12 @@
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class SortSpisZA {
     public void sortZA(String[] str){
-        str = Arrays.stream(str).sorted(Collections.reverseOrder())
-                .toArray(String[]::new);
-        for (int i = 0; i < str.length; i++) str[i] = str[i].toUpperCase();
-        System.out.println(Arrays.toString(str));
+        String result =  Arrays.stream(str)
+                .map(word -> word.toUpperCase())
+                .sorted(Comparator.reverseOrder())
+                .collect(Collectors.joining(", "));
+        System.out.println(result);
     }
 }
