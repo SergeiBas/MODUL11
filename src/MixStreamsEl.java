@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.stream.Stream;
 
 public class MixStreamsEl {
-    public static <T> Stream<T> MixStreamsEl(Stream<T> first, Stream<T> second) {
+    public static <T> Stream<T> mixStreamsEl(Stream<T> first, Stream<T> second) {
         List<T> arr = new ArrayList<>();
         Iterator<T> First = first.iterator();
         Iterator<T> Second = second.iterator();

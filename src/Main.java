@@ -7,6 +7,7 @@ public class Main {
         MixStreamsEl mixStreamsEl = new MixStreamsEl();
 
         String[] str =  new String[]{"Ivan", "Sasha", "Peter", "Sergei", "Maxim", "Nemaxim", "Artur"};
-        String[] numbers = new String[]{"1, 2, 0", "4, 5"};
+        String[] numbers = new String[]{"1, 2, 0", "4, 5", "11 , 3, 22"};
+        System.out.println(sortArr.sortNumbers(numbers));
     }
 }
